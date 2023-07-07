@@ -6,8 +6,8 @@ function Header() {
       <div className="background-image"></div>
       <div className="overlay">
         <div className="texto-header">
-          <h1>¡Tus películas favoritas!</h1>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          <h1>Get your favourite movies!</h1>
+          <p>Dive into the world of cinema: Stream it all on our site!</p>
         </div>
       </div>
     </div>
