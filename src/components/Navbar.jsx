@@ -7,8 +7,8 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="container">
-        <div className="d-flex align-items-center">
-          <Link className="brand me-4" to="/">
+        <div className="d-flex align-items-center justify-content-between w-100">
+          <Link className="brand " to="/">
             Hackflix
           </Link>
           {isSearchPage ? null : (
@@ -21,9 +21,9 @@ function Navbar() {
             </Link>
           )}
         </div>
-        <Link className="home-link " to="/">
+        {/* <Link className="home-link " to="/">
           Home
-        </Link>
+        </Link> */}
       </div>
       <hr className="text-success" />
     </nav>

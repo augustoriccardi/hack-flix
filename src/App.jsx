@@ -7,14 +7,14 @@ import MovieDetails from "./pages/MovieDetails";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import SearchMovie from "./pages/SearchMovie";
-import useIsOnline from "./components/useIsOnLine";
+// import useIsOnline from "./components/useIsOnLine";
 
 function App() {
-  const isOnline = useIsOnline();
+  // const isOnline = useIsOnline();
   return (
     <>
       <Navbar />
-      {isOnline ? (
+      {/* {isOnline ? (
         <div className="container">
           <div
             className="position-fixed bottom-0 border mb-4 bg-transparent text-light"
@@ -32,7 +32,7 @@ function App() {
             🔴 The Site is Off Line
           </div>
         </div>
-      )}
+      )} */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />

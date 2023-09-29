@@ -65,11 +65,12 @@ function MovieDetails() {
     return (
       <div className="container">
         <div className="row mx-4 movie-detail-row">
-          <div className="col-md-6">
+          <div className="col-md-6 d-flex justify-content-center">
             <img
               src={`https://image.tmdb.org/t/p/original${movieData.poster_path}`}
               alt=""
               className="img-fluid rounded"
+              style={{ height: "85vh" }}
             />
           </div>
           <div className="col-md-6 ">
