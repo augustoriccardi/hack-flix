@@ -83,6 +83,7 @@ function Chatbot() {
         `,
         max_tokens: 700,
       });
+      setShowMoviePitchBtn(true);
       console.log(response.choices[0].text);
       return response.choices[0].text;
     } catch (error) {
@@ -156,7 +157,7 @@ function Chatbot() {
         size: "256x256",
         response_format: "url",
       });
-      setShowMoviePitchBtn(true);
+
       return response.data[0].url;
     } catch (error) {
       console.error("Error:", error);
@@ -172,19 +173,19 @@ function Chatbot() {
       const botResponse = await fetchChatbotResponse(userInput);
       setBotReply(botResponse);
       const synopsisResponse = await fetchSynopsis(userInput);
-      const titleResponse = await fetchMovieTitle(synopsisResponse);
-      const starsResponse = await fetchMovieStars(synopsisResponse);
-      const imageDescriptionResponse = await fetchImageDescription(
-        titleResponse,
-        synopsisResponse
-      );
-      const imageUrlResponse = await fetchImageURL(imageDescriptionResponse);
+      // const titleResponse = await fetchMovieTitle(synopsisResponse);
+      // const starsResponse = await fetchMovieStars(synopsisResponse);
+      // const imageDescriptionResponse = await fetchImageDescription(
+      //   titleResponse,
+      //   synopsisResponse
+      // );
+      // const imageUrlResponse = await fetchImageURL(imageDescriptionResponse);
 
       setSynopsisReply(synopsisResponse);
-      setTitleReply(titleResponse);
-      setStarsReply(starsResponse);
-      setImageDescriptionReply(imageDescriptionResponse);
-      setImageUrlReply(imageUrlResponse);
+      // setTitleReply(titleResponse);
+      // setStarsReply(starsResponse);
+      // setImageDescriptionReply(imageDescriptionResponse);
+      // setImageUrlReply(imageUrlResponse);
     } catch (error) {
       console.error("Error:", error);
     } finally {
@@ -259,7 +260,7 @@ function Chatbot() {
                   >
                     <Form.Control
                       id="setup-textarea"
-                      placeholder="Go on and type an intriguing plot!..."
+                      placeholder="Go on and type an intriguing plot for a synopsis!..."
                       as="textarea"
                       rows={2}
                       value={userInput}
@@ -308,15 +309,13 @@ function Chatbot() {
               style={{ height: "3rem" }}
             />
             <Link to="/" style={{ fontSize: "1.5rem" }} className="text-light">
-              <span className="fs-4">
-                Good Luck with your movie! Remember, I want 10% 💰🤣
-              </span>
+              <span className="fs-4">Here is your synopsis!😊</span>
             </Link>
           </div>
         </Modal.Header>
         <Modal.Body>
           <section className="output-container" id="output-container">
-            <div
+            {/* <div
               id="output-img-container"
               className="output-img-container d-flex justify-content-center align-items-center m-2"
             >
@@ -325,10 +324,10 @@ function Chatbot() {
                 alt="movie-img"
                 style={{ width: "100%" }}
               />
-            </div>
+            </div> */}
             <div className="d-flex flex-column justify-content-center align-items-center mt-4">
-              <h1 id="output-title">{titleReply}</h1>
-              <h2 id="output-stars">{starsReply}</h2>
+              {/* <h1 id="output-title">{titleReply}</h1>
+              <h2 id="output-stars">{starsReply}</h2> */}
             </div>
 
             <p id="output-text" className="m-2">

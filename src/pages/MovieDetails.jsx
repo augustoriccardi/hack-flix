@@ -70,7 +70,7 @@ function MovieDetails() {
               src={`https://image.tmdb.org/t/p/original${movieData.poster_path}`}
               alt=""
               className="img-fluid rounded"
-              style={{ height: "85vh" }}
+              style={{ maxHeight: "85vh" }}
             />
           </div>
           <div className="col-md-6 ">

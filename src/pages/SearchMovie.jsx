@@ -32,7 +32,7 @@ function SearchMovie() {
 
   return (
     <div className="container">
-      <div className="row">
+      <div className="row ">
         <div className="col-12 col-sm-12 col-lg-6 mb-4">
           <div style={{ paddingTop: "60px" }}>
             <div className="input-group">
