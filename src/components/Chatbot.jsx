@@ -253,8 +253,8 @@ function Chatbot() {
                     className="setup-inner setup-input-container"
                     id="setup-input-container"
                   >
-                    <input
-                      className="w-100 rounded-start border border-secondary border-end-0 "
+                    <Form.Control
+                      className="w-100 rounded-start rounded-end-0 border-end-0 "
                       id="setup-textarea"
                       placeholder="Go on and type an intriguing plot!..."
                       as="textarea"
